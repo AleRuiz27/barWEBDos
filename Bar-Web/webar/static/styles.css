@@ -1,0 +1,30 @@
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url('images/Azul.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+header{
+    margin-bottom: 20px;
+
+}
+.boton{
+    padding: 10px 20px;
+    background-color: rgb(73, 49, 184);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+
+
+
+}

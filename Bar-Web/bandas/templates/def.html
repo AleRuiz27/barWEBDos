@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">BANDA</th>
+            <th scope="col">LUGAR</th>
+            <th scope="col">DIA</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for evento in eventos%}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{evento.BANDA}}</td>
+            <td>{{evento.LUGAR}}</td>
+            <td>{{evento.DIA}}</td>
+          </tr>
+          {%endfor%}
+          
+        </tbody>
+      </table>
+      <style>
+        input {
+padding: 10px;
+border: 1px solid #444;
+border-radius: 5px;
+font-size: 16px;
+margin-right: 30px;
+background-color: #1a1a1a; 
+color: #eee; 
+outline: none;
+box-shadow: 0px 0px 8px rgba(127, 41, 167, 0.3); 
+transition: all 0.3s ease;
+}
+
+input:focus {
+border-color: #676767; 
+box-shadow: 0px 0px 12px rgba(255, 7, 127, 0.5); 
+}
+
+button {
+padding: 10px 20px;
+background-color: #160347; 
+color: #bce6f7; 
+border: none;
+border-radius: 5px;
+cursor: pointer;
+box-shadow: 0px 0px 8px rgba(255, 20, 147, 0.4); 
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+background-color: #e60073; 
+box-shadow: 0px 0px 12px rgba(255, 20, 147, 0.6); 
+}
+@keyframes moverFondo {
+0% { background-position: center; }
+100% { background-position: center top; }
+}
+@keyframes balanceoFondo {
+0% { background-position: left center; }
+50% { background-position: right center; }
+100% { background-position: left center; }
+}
+@keyframes moverFondoOlas {
+0% { background-position: center top; }
+50% { background-position: center bottom; }
+100% { background-position: center top; }
+}
+
+body{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100vh;
+
+background-image: url('/static/images/WlMN.gif');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+animation: moverFondo 20s linear infinite;
+
+
+
+}
+
+
+
+
+    </style>
+
+
+</html>
