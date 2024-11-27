@@ -4,9 +4,9 @@ from django.db import models
 class conciertos(models.Model):
     ARTISTAS = models.CharField(max_length=100)
     LUGAR = models.CharField(max_length=100)
-    #FECHA = models.DateField()
+    FECHA = models.DateField()
     def __str__(self):
-        return self.banda
+        return self.ARTISTAS
     
 
 class Person(models.Model):

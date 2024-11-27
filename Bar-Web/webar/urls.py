@@ -17,14 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from bandas.views import ver_eventos, base, formt, RESULT
+from bandas.views import ver_eventos, base, formt, RESULT, post_nuevo, finish
 
 urlpatterns = [
     path('admin/',admin.site.urls),
     #path('', include('apps.webar.urls')),
     path('', base),
-    path('def/', ver_eventos),
+    path('def/', post_nuevo),
     path('formularioDeCarga/', formt),
+    path('finish/', post_nuevo),
     #path('def/',ver_eventos, name='mostrar evento'),
     #path('contacto/', base),     
 ]
