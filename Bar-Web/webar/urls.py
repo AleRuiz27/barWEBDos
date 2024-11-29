@@ -21,9 +21,9 @@ from bandas.views import ver_eventos, base, formt, RESULT, post_nuevo, finish
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-    #path('', include('apps.webar.urls')),
     path('', base),
-    path('def/', post_nuevo),
+    path('def/', ver_eventos),
+    path('formulario/', ver_eventos),
     path('formularioDeCarga/', formt),
     path('finish/', post_nuevo),
     #path('def/',ver_eventos, name='mostrar evento'),

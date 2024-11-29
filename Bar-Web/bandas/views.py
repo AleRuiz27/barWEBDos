@@ -31,7 +31,7 @@ def post_nuevo(request):
         # create a form instance and populate it with data from the request:
     
         with connection.cursor() as insertar:
-            insertar.execute(f"INSERT INTO `conciertos` (`ARTISTAS`, `LUGAR`, `FECHA`) VALUES ('{user_name}', '{user_lugar}', '{trip_start}')")
+            insertar.execute(f"INSERT INTO `bandas_conciertos` (`ARTISTAS`, `LUGAR`, `FECHA`) VALUES ('{user_name}', '{user_lugar}', '{trip_start}')")
         
         
         return render(request, 'exito.html')
@@ -43,19 +43,19 @@ def post_nuevo(request):
 
 
 
+#def ver_eventos(request):
+    #with connection.cursor() as recorrer:
+     #   recorrer.execute('select * from conciertos')
+      #  row = recorrer.fetchall()
+       # c = conciertos.objects.all()
+
+    #return HttpResponse(row)
+
+
+
+
+
+
 def ver_eventos(request):
-    with connection.cursor() as recorrer:
-        recorrer.execute('select * from conciertos')
-        row = recorrer.fetchall()
-        c = conciertos.objects.all()
-
-    return HttpResponse(row)
-
-
-
-
-
-
-#def lista_eventos(request):
-    eventos = Evento.objects.all()
+    eventos = conciertos.objects.all()
     return render(request, 'def.html',{'eventos': eventos})

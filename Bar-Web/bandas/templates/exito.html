@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Éxito al Cargar</title>
+
+    <!-- Enlace a Google Fonts para un estilo moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos internos -->
+    <style>
+        body {
+            background-color: #1c1c1c;  /* Fondo oscuro */
+            color: #f2f2f2;  /* Texto en blanco suave */
+            font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff66b2;  /* Rosa brillante para destacar el título */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #5e4b8b;  /* Violeta oscuro */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #d74fa1;  /* Rosa claro al pasar el cursor */
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>EXITO A CARGAR</h1>
-    
+    <div class="container">
+        <h1>¡Éxito al Cargar!</h1>
+        <a href="/" class="button">Volver al inicio</a>
+    </div>
+
 </body>
 </html>
